@@ -1,1 +1,18 @@
 /* Add CSS Styling */
+
+/* both font size 28 with list of fonts (with space double quote, wihtout no need")*/
+.adjust-font-size {
+    font-size: 28px;
+    font-family: Helvatica, "Times New Roman", sans-serif;
+}
+
+/* first element */
+.first {
+    background-color: black;
+    color: white
+}
+
+/* second element */
+.second {
+    background-color: yellow;
+}
