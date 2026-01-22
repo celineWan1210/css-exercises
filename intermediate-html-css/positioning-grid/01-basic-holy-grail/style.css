@@ -1,3 +1,12 @@
+/* - The gap is 15px
+- The grid has two columns
+- The grid has four rows
+- The second column is three times larger than the first
+- The third row is five times larger than the others
+- The header and footer elements span across both columns
+- The sidebar element only spans across the first column
+- The nav and article elements span across the second column */
+
 body,
 html {
   height: 100%;
@@ -6,9 +15,14 @@ html {
 
 .container {
   text-align: center;
-  height: 100%;
   padding: 16px;
   box-sizing: border-box;
+
+  display: grid;
+  gap: 15px;
+  height: 100vh;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 5fr 1fr;
 }
 
 .container div {
@@ -22,22 +36,37 @@ html {
 
 .header {
   background-color: #006157;
+
+  grid-row: 1;
+  grid-column: 1 / 3;
 }
 
 .sidebar {
   background-color: #005B94;
+
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
 }
 
 .nav {
   background-color: #642cde;
+
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .article {
   background-color: #7E1DC3;
+
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
 }
 
 .footer {
   background-color: #393f4d;
+
+  grid-row: 4 / 5;
+  grid-column: 1 / 3;
 }
 
 .article p {
